@@ -1,0 +1,383 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat May 15 19:13:20 2021
+# Process ID: 81124
+# Current directory: /home/lambdallama/E341Final/E341Final.runs/synth_1
+# Command line: vivado -log cpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
+# Log file: /home/lambdallama/E341Final/E341Final.runs/synth_1/cpu.vds
+# Journal file: /home/lambdallama/E341Final/E341Final.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source cpu.tcl -notrace
+Command: synth_design -top cpu -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 81189
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2290.266 ; gain = 0.000 ; free physical = 5127 ; free virtual = 9788
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'cpu' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:39]
+INFO: [Synth 8-3491] module 'twos_8bit' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/twos_8bit.vhd:4' bound to instance 'twos' of component 'twos_8bit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'twos_8bit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/twos_8bit.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'twos_8bit' (1#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/twos_8bit.vhd:9]
+INFO: [Synth 8-3491] module 'control' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:34' bound to instance 'control_unit' of component 'control' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'control' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:53]
+WARNING: [Synth 8-614] signal 'alus' is read in the process but is not in the sensitivity list [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:68]
+WARNING: [Synth 8-614] signal 'is_imm' is read in the process but is not in the sensitivity list [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:68]
+WARNING: [Synth 8-614] signal 'mem_s' is read in the process but is not in the sensitivity list [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:68]
+WARNING: [Synth 8-614] signal 'ldstr_s' is read in the process but is not in the sensitivity list [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:68]
+WARNING: [Synth 8-614] signal 'jump' is read in the process but is not in the sensitivity list [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:68]
+WARNING: [Synth 8-614] signal 'setlt' is read in the process but is not in the sensitivity list [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:68]
+WARNING: [Synth 8-614] signal 'negative' is read in the process but is not in the sensitivity list [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:68]
+WARNING: [Synth 8-614] signal 'bEQ_s' is read in the process but is not in the sensitivity list [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:68]
+WARNING: [Synth 8-614] signal 'alu_result' is read in the process but is not in the sensitivity list [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'control' (2#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:53]
+INFO: [Synth 8-3491] module 'regin_mux' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/regin_mux.vhd:34' bound to instance 'reg_in_mux' of component 'regin_mux' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'regin_mux' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/regin_mux.vhd:43]
+INFO: [Synth 8-226] default block is never used [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/regin_mux.vhd:47]
+INFO: [Synth 8-226] default block is never used [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/regin_mux.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'regin_mux' (3#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/regin_mux.vhd:43]
+INFO: [Synth 8-3491] module 'mem_mux' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/mem_mux.vhd:34' bound to instance 'memmux' of component 'mem_mux' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:202]
+INFO: [Synth 8-638] synthesizing module 'mem_mux' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/mem_mux.vhd:42]
+INFO: [Synth 8-226] default block is never used [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/mem_mux.vhd:45]
+INFO: [Synth 8-226] default block is never used [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/mem_mux.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'mem_mux' (4#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/mem_mux.vhd:42]
+INFO: [Synth 8-3491] module 'pc_reg' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/pc_reg.vhd:34' bound to instance 'pcPM' of component 'pc_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:210]
+INFO: [Synth 8-638] synthesizing module 'pc_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/pc_reg.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'pc_reg' (5#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/pc_reg.vhd:42]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'full_adder_Nbit' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:34' bound to instance 'pcp2' of component 'full_adder_Nbit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:217]
+INFO: [Synth 8-638] synthesizing module 'full_adder_Nbit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:42]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:42]
+INFO: [Synth 8-3491] module 'half_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/half_adder.vhd:34' bound to instance 'ha1' of component 'half_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'half_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/half_adder.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'half_adder' (6#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/half_adder.vhd:41]
+INFO: [Synth 8-3491] module 'half_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/half_adder.vhd:34' bound to instance 'ha2' of component 'half_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'full_adder' (7#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:42]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'full_adder_Nbit' (8#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:42]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'full_adder_Nbit' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:34' bound to instance 'pcpi' of component 'full_adder_Nbit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:222]
+INFO: [Synth 8-638] synthesizing module 'full_adder_Nbit__parameterized1' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:42]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'full_adder_Nbit__parameterized1' (8#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:42]
+INFO: [Synth 8-3491] module 'pc_mux' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/pc_mux.vhd:34' bound to instance 'pcmux' of component 'pc_mux' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:227]
+INFO: [Synth 8-638] synthesizing module 'pc_mux' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/pc_mux.vhd:41]
+INFO: [Synth 8-226] default block is never used [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/pc_mux.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'pc_mux' (9#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/pc_mux.vhd:41]
+INFO: [Synth 8-3491] module 'src2_mux' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/src2_mux.vhd:34' bound to instance 's2' of component 'src2_mux' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:233]
+INFO: [Synth 8-638] synthesizing module 'src2_mux' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/src2_mux.vhd:41]
+INFO: [Synth 8-226] default block is never used [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/src2_mux.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'src2_mux' (10#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/src2_mux.vhd:41]
+INFO: [Synth 8-3491] module 'decode_unit' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:34' bound to instance 'decode' of component 'decode_unit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'decode_unit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'decode_unit' (11#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:53]
+INFO: [Synth 8-3491] module 'PM' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/PM.vhd:34' bound to instance 'pm_upperbyte' of component 'PM' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:257]
+INFO: [Synth 8-638] synthesizing module 'PM' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/PM.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'PM' (12#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/PM.vhd:39]
+INFO: [Synth 8-3491] module 'PM' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/PM.vhd:34' bound to instance 'pm_lowerbyte' of component 'PM' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:261]
+INFO: [Synth 8-3491] module 'reg_unit' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/reg_unit.vhd:31' bound to instance 'regs' of component 'reg_unit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:265]
+INFO: [Synth 8-638] synthesizing module 'reg_unit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/reg_unit.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'reg_unit' (13#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/reg_unit.vhd:39]
+INFO: [Synth 8-3491] module 'sign_extend' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/sign_extend.vhd:34' bound to instance 'sign' of component 'sign_extend' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:274]
+INFO: [Synth 8-638] synthesizing module 'sign_extend' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/sign_extend.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'sign_extend' (14#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/sign_extend.vhd:39]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'ALU' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/ALU.vhd:34' bound to instance 'alupm' of component 'ALU' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:278]
+INFO: [Synth 8-638] synthesizing module 'ALU' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/ALU.vhd:43]
+	Parameter N bound to: 16 - type: integer 
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'full_adder_Nbit' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:34' bound to instance 'Adder' of component 'full_adder_Nbit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/ALU.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'full_adder_Nbit__parameterized3' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:42]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-3491] module 'full_adder' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder.vhd:34' bound to instance 'FAx' of component 'full_adder' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'full_adder_Nbit__parameterized3' (14#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_adder_2bit.vhd:42]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'full_sub_Nbit' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:34' bound to instance 'SUB' of component 'full_sub_Nbit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/ALU.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'full_sub_Nbit' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:43]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Full_Sub' (15#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:42]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-3491] module 'Full_Sub' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/Full_Sub.vhd:34' bound to instance 'FSx' of component 'Full_Sub' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'full_sub_Nbit' (16#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/full_sub_Nbit.vhd:43]
+INFO: [Synth 8-3491] module 'Twos_Complement' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/imports/Lab2_Files/Twos_Complement.vhd:4' bound to instance 'Twos_C' of component 'Twos_Complement' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/ALU.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'Twos_Complement' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/imports/Lab2_Files/Twos_Complement.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'Twos_Complement' (17#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/imports/Lab2_Files/Twos_Complement.vhd:9]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'output_MUX' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/output_MUX.vhd:31' bound to instance 'outputmux' of component 'output_MUX' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/ALU.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'output_MUX' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/output_MUX.vhd:48]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'output_MUX' (18#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/output_MUX.vhd:48]
+INFO: [Synth 8-3491] module 'overflowMux' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/MUX2to1.vhd:34' bound to instance 'ov_MUx' of component 'overflowMux' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/ALU.vhd:134]
+INFO: [Synth 8-638] synthesizing module 'overflowMux' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/MUX2to1.vhd:41]
+INFO: [Synth 8-226] default block is never used [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/MUX2to1.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'overflowMux' (19#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/MUX2to1.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (20#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/imports/sources_1/new/ALU.vhd:43]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'RAM_model' declared at '/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/RAM.vhd:5' bound to instance 'DM' of component 'RAM_model' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:285]
+INFO: [Synth 8-638] synthesizing module 'RAM_model' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/RAM.vhd:16]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RAM_model' (21#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/RAM.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'cpu' (22#1) [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/cpu.vhd:39]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2290.266 ; gain = 0.000 ; free physical = 5897 ; free virtual = 10558
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2290.266 ; gain = 0.000 ; free physical = 5899 ; free virtual = 10560
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2290.266 ; gain = 0.000 ; free physical = 5899 ; free virtual = 10560
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2290.266 ; gain = 0.000 ; free physical = 5891 ; free virtual = 10552
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/lambdallama/E341Final/E341Final.srcs/constrs_1/imports/new/lab4constraints.xdc]
+Finished Parsing XDC File [/home/lambdallama/E341Final/E341Final.srcs/constrs_1/imports/new/lab4constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/lambdallama/E341Final/E341Final.srcs/constrs_1/imports/new/lab4constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpu_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2322.184 ; gain = 0.000 ; free physical = 5800 ; free virtual = 10461
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2322.184 ; gain = 0.000 ; free physical = 5800 ; free virtual = 10461
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5922 ; free virtual = 10584
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5922 ; free virtual = 10584
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5922 ; free virtual = 10584
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'dr_ss_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:96]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:77]
+WARNING: [Synth 8-327] inferring latch for variable 'pc_add_imm_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:78]
+WARNING: [Synth 8-327] inferring latch for variable 'ld_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:75]
+WARNING: [Synth 8-327] inferring latch for variable 'regw_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:83]
+WARNING: [Synth 8-327] inferring latch for variable 'pcupdate_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/control.vhd:79]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:70]
+WARNING: [Synth 8-327] inferring latch for variable 'aluop_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:62]
+WARNING: [Synth 8-327] inferring latch for variable 'jump_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:67]
+WARNING: [Synth 8-327] inferring latch for variable 'bEQ_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:68]
+WARNING: [Synth 8-327] inferring latch for variable 'alui_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:66]
+WARNING: [Synth 8-327] inferring latch for variable 'ldstr_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:88]
+WARNING: [Synth 8-327] inferring latch for variable 'setlt_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:69]
+WARNING: [Synth 8-327] inferring latch for variable 'regaddress_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:99]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:63]
+WARNING: [Synth 8-327] inferring latch for variable 'sr1_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:64]
+WARNING: [Synth 8-327] inferring latch for variable 'immediate_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:81]
+WARNING: [Synth 8-327] inferring latch for variable 'program_address_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'ADDRESS_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:98]
+WARNING: [Synth 8-327] inferring latch for variable 'sr2_reg' [/home/lambdallama/E341Final/E341Final.srcs/sources_1/new/decode_unit.vhd:65]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5911 ; free virtual = 10578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 118   
++---Registers : 
+	               16 Bit    Registers := 257   
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 3     
+	 257 Input    8 Bit        Muxes := 2     
+	   8 Input    7 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 9     
+	   2 Input    1 Bit        Muxes := 265   
+	   8 Input    1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5922 ; free virtual = 10591
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5800 ; free virtual = 10468
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5800 ; free virtual = 10468
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5798 ; free virtual = 10467
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5797 ; free virtual = 10466
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5797 ; free virtual = 10466
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5797 ; free virtual = 10466
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5797 ; free virtual = 10466
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5797 ; free virtual = 10466
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5797 ; free virtual = 10466
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2322.184 ; gain = 31.918 ; free physical = 5797 ; free virtual = 10466
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2322.184 ; gain = 0.000 ; free physical = 5851 ; free virtual = 10520
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2322.191 ; gain = 31.918 ; free physical = 5852 ; free virtual = 10520
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2322.191 ; gain = 0.000 ; free physical = 5845 ; free virtual = 10514
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2322.191 ; gain = 0.000 ; free physical = 5878 ; free virtual = 10546
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+139 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2322.191 ; gain = 32.023 ; free physical = 6023 ; free virtual = 10691
+INFO: [Common 17-1381] The checkpoint '/home/lambdallama/E341Final/E341Final.runs/synth_1/cpu.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cpu_utilization_synth.rpt -pb cpu_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat May 15 19:14:06 2021...
